@@ -105,5 +105,5 @@ Handbooks search engine is powered by [lunr]. The `handbook#search` method is a 
 
 Thank you for the [Nodejitsu](https://nodejitsu.com) team for building much of the code that powers this module. You should check them out for Node.js hosting options
 
-[lunr]: https://github.com/olivernn/lunr.js 
+[lunr]: https://github.com/olivernn/lunr.js
 [versions]: http://versions.nodejitsu.com
