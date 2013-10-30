@@ -1,6 +1,6 @@
-# The Percent Handbook
+# Percent Documentation
 
-Welcome to the Percent handbook. This page represents our public facing documentation.
+Welcome to the Percent official documentation. In here you will find the article we use in our website to document our platform.
 
 For fixes please send a pull request.
 
@@ -24,28 +24,28 @@ Simple remove articles or folders.
 
 ### Images
 
-Images must be added to `/img`. [Versions][versions] will ensure images are fetched from the repository and properly cached. Linking to an image from the article should be done as below:
+Images must be added to `/assets`. [Versions][versions] will ensure images are fetched from the repository and properly cached. Linking to an image from the article should be done as below:
 
 ```
-![no applications](https://cdn.percent.io/id:handbook/resources/noapps.png)
+![no applications](https://cdn.percent.io/id:documentation/resources/noapps.png)
 ```
 
 ## Developers
 
-### Using the Handbook as Module
+### Using the Documentation as Module
 
-Simply add handbook as dependency to the `package.json`, make sure to call the handbook constructor, otherwise the [search index][lunr] will not be initialized properly.
+Simply add documentation as dependency to the `package.json`, make sure to call the documentation constructor, otherwise the [search index][lunr] will not be initialized properly.
 
 ``` javascript
-var Handbook = require('handbook'),
-    documentation = new Handbook();
+var Documentation = require('documentation'),
+    docs = new Documentation();
 
-documentation.search('query');
+docs.search('query');
 ```
 
 ### Get Markdown Content
 
-Call `handbook.get('/quickstart/hello-world')` with a relative path to the article as first parameter, adding `.md` is optional.
+Call `documentation.get('/quickstart/hello-world')` with a relative path to the article as first parameter, adding `.md` is optional.
 
 Will return an object with keys content, description, title and tags. For more details about data for all keys, see [Description, title and tags][description].
 
@@ -55,32 +55,32 @@ Will return an object with keys content, description, title and tags. For more d
   description: 'description parsed from content',
   title: 'title parsed from content',
   tags: [
-    'top', 'ten', 'unique', 'descriptive', 'words', 
+    'top', 'ten', 'unique', 'descriptive', 'words',
     'without', 'numbers', 'and', 'short', 'tags'
-  ] 
+  ]
 }
 ```
 
-[description]: #description-title-and-tags 
+[description]: #description-title-and-tags
 
 ### Get the Catalog
 
-Call `handbook.catalog()` to acquire a complete catalog from content (synchronously), which should return an object with paths, href's, titles and descriptions. If you want to generate the catalog asynchronously then supply a callback to the function.
+Call `documentation.catalog()` to acquire a complete catalog from content (synchronously), which should return an object with paths, href's, titles and descriptions. If you want to generate the catalog asynchronously then supply a callback to the function.
 
 ``` javascript
 {
   index: {
     index: {
       href: '',
-      title: 'Handbook',
-      description: '# Introduction\n\nFoo Bar' 
+      title: 'Docs',
+      description: '# Introduction\n\nFoo Bar'
     }
   },
   support: {
     index: {
       href: '/support',
       title: 'Support',
-      description: '#Support\n\nBaz Foo' 
+      description: '#Support\n\nBaz Foo'
     }
   }
 }
@@ -99,7 +99,7 @@ Tags are parsed from the content by using TFIDF. Ten of the most descriptive tag
 
 ### Full Text Search
 
-Handbooks search engine is powered by [lunr]. The `handbook#search` method is a simple proxy to Lunr search.
+The search engine is powered by [lunr]. The `documentation#search` method is a simple proxy to Lunr search.
 
 ### Thank you
 

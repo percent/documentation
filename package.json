@@ -1,0 +1,22 @@
+{
+  "name": "percent-documentation",
+  "version": "0.0.0",
+  "description": "percent docs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/usepercent/documentation.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/usepercent/documentation/issues"
+  },
+  "dependencies": {
+    "lunr": "~0.4.2",
+    "natural": "~0.1.23"
+  }
+}
