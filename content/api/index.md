@@ -12,6 +12,8 @@ Not yet
 
 ## API Specification
 
+* [Applications](#get-app)
+
 ### GET `/app`
 
 Retrieves current app details by appkey argument or referral domain name.
@@ -19,7 +21,7 @@ Retrieves current app details by appkey argument or referral domain name.
 Request:
 
 ```bash
-curl http://localhost:8081/app?appkey=TESTAPP2:C7tLp/flbg41M5iyC6Tb02K8yR09zBb266KtiIyVkLs=
+curl http://api.percent.io/app?appkey=TESTAPP2:C7tLp/flbg41M5iyC6Tb02K8yR09zBb266KtiIyVkLs=
 ```
 
 Response:
