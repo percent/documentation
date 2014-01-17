@@ -1,5 +1,3 @@
-# Percent REST API
-
 Percent provides an API for developers who want to interact with our platform.
 
 ## Clients
@@ -14,7 +12,7 @@ Not yet
 
 ## API Specification
 
-### GET /app
+### GET `/app`
 
 Retrieves current app details by appkey argument or referral domain name.
 
